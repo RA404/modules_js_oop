@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/RA404/modules_js_oop/issues"
   },
-  "homepage": "https://github.com/RA404/modules_js_oop#readme"
+  "homepage": "https://github.com/RA404/modules_js_oop#readme",
+  "devDependencies": {
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11"
+  }
 }
