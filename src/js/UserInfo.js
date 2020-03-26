@@ -1,4 +1,4 @@
-class UserInfo {
+export class UserInfo {
   constructor(userInfoContainer, userAvatar, api, resourcePath) {
     this.userInfoContainer = userInfoContainer;
     this.userNameContainer = this.userInfoContainer.querySelector('.user-info__name');

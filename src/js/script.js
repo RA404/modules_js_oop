@@ -1,3 +1,14 @@
+import '../pages/index.css';
+
+import {FormValidator} from './FormValidator.js';
+import {Api} from './Api.js';
+import {UserInfo} from './UserInfo.js';
+import {PopupImage} from './PopupImage.js';
+import {Card} from './Card.js';
+import {CardList} from './CardList.js';
+import {PopupNewPlace} from './PopupNewPlace.js';
+import {PopupEditInfo} from './PopupEditInfo.js'
+
 const token_key = 'ce2424bc-9470-4677-8189-94c722618035';
 const cohortId = 'cohort7';
 const ipUser = `http://95.216.175.5/${cohortId}/users/me`;

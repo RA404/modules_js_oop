@@ -1,4 +1,4 @@
-class PopupEditInfo {
+export class PopupEditInfo {
   constructor(formValidator, userInfoContainer, userInfo, formEditInfo) {
     this.userInfoContainer = userInfoContainer;
     this.formEditInfo = formEditInfo;
