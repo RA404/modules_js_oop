@@ -11,3 +11,5 @@
 <script src="js/script.js"></script>
 test
 */
+
+import "./pages/index.css";
