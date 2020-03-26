@@ -25,28 +25,24 @@ module.exports = {
                 use: [(isDev ? 'style-loader' : MiniCssExtractPlugin.loader), 'css-loader', 'postcss-loader'] // добавили минификацию CSS
             },
             {
-                test: /\.(png|jpe?g|gif)$/i,
+                test: /\.(png|jpg|gif|ico|svg)$/,
                 use: [
-                    'file-loader?name=../images1/[name].[ext]', // указали папку, куда складывать изображения
                     {
-                        loader: 'file-loader',
+                        loader: 'file-loader?name=../images/[name].[ext]',
+                        options: {
+                          esModule: false
+                        }
+                    },
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                        },
                     },
                 ],
             },
             {
                 test: /\.(eot|ttf|woff|woff2)$/,
                 loader: 'file-loader?name=./vendor/[name].[ext]'
-            },            
-            {
-                //test: /\.(png|jpg|gif|ico|svg)$/,
-                test: /\.(ico|svg)$/,
-                use: [
-                    'file-loader?name=../images2/[name].[ext]', // указали папку, куда складывать изображения
-                    {
-                        loader: 'image-webpack-loader',
-                        options: {}
-                    },
-                ]
             }
         ]
     },
