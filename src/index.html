@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mesto</title>
-  <!--<link rel="stylesheet" href="./pages/index.css">-->
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
 </head>
 <body>
@@ -26,19 +25,7 @@
     </div>
 
     <div class="places-list root__section">
-      <!-- Пример вёрстки карточки: -->
 
-      <!--<div class="place-card">
-        <div class="place-card__image" style="background-image: url(https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg)">
-          <button class="place-card__delete-icon"></button>
-        </div>
-        <div class="place-card__description">
-          <h3 class="place-card__name">Камчатка</h3>
-          <button class="place-card__like-icon"></button>
-        </div>
-      </div> --> 
-
-      <!-- конец примера. -->
     </div>
 
     <div class="popup">
@@ -54,7 +41,7 @@
             <input type="url" name="link" class="popup__input popup__input_type_link-url" placeholder="Ссылка на картинку">
             <span class="error"></span>
           </div>  
-          <button type name="addButton" class="button popup__button">+</button> <!--popup__button_type_active-->
+          <button type name="addButton" class="button popup__button">+</button>
         </form>
       </div>
     </div>
@@ -84,18 +71,8 @@
       </div>     
     </div>
   </div> 
-  <!--<script src="js/FormValidator.js"></script>
-  <script src="js/Card.js"></script>
-  <script src="js/CardList.js"></script>
-  <script src="js/PopupEditInfo.js"></script>  
-  <script src="js/PopupImage.js"></script>  
-  <script src="js/PopupNewPlace.js"></script> 
-  <script src="js/UserInfo.js"></script>   
-
-  <script src="js/Api.js"></script>
-  <script src="js/script.js"></script>-->
 
   <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
-  <!--<script src="./index.js"></script>-->
+
 </body>
 </html>
