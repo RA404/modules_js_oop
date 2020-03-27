@@ -25,6 +25,7 @@ module.exports = {
                 test: /\.css$/,
                 use: [(isDev ? 'style-loader' : MiniCssExtractPlugin.loader), 'css-loader', 'postcss-loader'] // добавили минификацию CSS
             },
+            {test: /\.html$/, use: 'html-loader'},
             {
                 test: /\.(png|jpg|gif|ico|svg)$/,
                 use: [
