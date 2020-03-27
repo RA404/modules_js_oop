@@ -30,7 +30,7 @@ module.exports = {
                 test: /\.(png|jpg|gif|ico|svg)$/,
                 use: [
                     {
-                        loader: 'file-loader?name=../images/[name].[ext]',
+                        loader: 'file-loader?name=./images/[name].[ext]',
                         options: {
                           esModule: false
                         }
@@ -55,7 +55,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             inject: false,
             template: './src/index.html',
-            filename: 'index.html'
+            filename: 'index.html'            
         }),
         new webpack.DefinePlugin({
             'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
