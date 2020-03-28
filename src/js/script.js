@@ -29,7 +29,7 @@ const popupImageForm =  document.querySelector('.popupFullSizeImage');
 const validation = new FormValidator(); 
 
 const api = new Api(token_key, cohortId); 
-const userInfo = new UserInfo(userInfoContainer, userAvatar, api, ipUser);
+const userInfo = new UserInfo(userInfoContainer, userAvatar, api, ipUser,token_key);
 
 //карточки
 const cards = []; // массив с карточками 

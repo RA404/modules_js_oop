@@ -1,5 +1,5 @@
 export class UserInfo {
-  constructor(userInfoContainer, userAvatar, api, resourcePath) {
+  constructor(userInfoContainer, userAvatar, api, resourcePath,token_key) {
     this.userInfoContainer = userInfoContainer;
     this.userNameContainer = this.userInfoContainer.querySelector('.user-info__name');
     this.userDescriptionContainer = this.userInfoContainer.querySelector('.user-info__job');
@@ -8,6 +8,7 @@ export class UserInfo {
     this.avatar = userAvatar;
     this.api = api;
     this.serverPath = resourcePath;
+    this.token_key = token_key;
   }
 
   setUserInfo(nameResearcher, aboutResearcher, avatarLink) {
@@ -17,7 +18,7 @@ export class UserInfo {
   }
 
   updateUserInfo() {
-    let promiseUpdate = this.api.postUserInfo(this.serverPath, token_key, this.nameResearcher, this.aboutResearcher, this.avatarImgLink);
+    let promiseUpdate = this.api.postUserInfo(this.serverPath, this.token_key, this.nameResearcher, this.aboutResearcher, this.avatarImgLink);
     promiseUpdate
     .then((result) => {  
        this.userNameContainer.textContent = result.name;
