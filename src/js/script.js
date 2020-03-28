@@ -11,8 +11,19 @@ import {PopupEditInfo} from './PopupEditInfo.js'
 
 const token_key = 'ce2424bc-9470-4677-8189-94c722618035';
 const cohortId = 'cohort7';
-const ipUser = `http://95.216.175.5/${cohortId}/users/me`;
-const ipCards = `http://95.216.175.5/${cohortId}/cards`;
+
+let baseUrl;
+if (process.env.NODE_ENV === 'production'){
+   baseUrl = `https://95.216.175.5/`;
+}
+else{
+   baseUrl = `http://95.216.175.5/`;
+}
+
+const ipUser = `${baseUrl}${cohortId}/users/me`;
+const ipCards = `${baseUrl}${cohortId}/cards`;
+/*const ipUser = `http://95.216.175.5/${cohortId}/users/me`;
+const ipCards = `http://95.216.175.5/${cohortId}/cards`;*/
 
 const container = document.querySelector('.places-list');// место куда записывать карточки
 const userInfoContainer = document.querySelector('.user-info'); //контейнер информации о пользователе
