@@ -1,4 +1,4 @@
-class PopupImage{
+export class PopupImage{
     constructor(popupImageForm){
       this.popupImageForm =  popupImageForm;
       this.popupCloseButton = this.popupImageForm.querySelector('.popupFullSizeImage__close');

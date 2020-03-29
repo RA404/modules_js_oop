@@ -1,4 +1,4 @@
-class Card {
+export class Card {
   constructor(container, popupImage) {
     this.container = container;
     this.popupImage = popupImage;

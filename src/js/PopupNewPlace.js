@@ -1,4 +1,4 @@
-class PopupNewPlace {
+export class PopupNewPlace {
   constructor(formValidator, userInfoContainer, cards, popupFormNewPlace) {
     this.userInfoContainer = userInfoContainer;
     this.popupFormNewPlace = popupFormNewPlace;
